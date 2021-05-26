@@ -1,5 +1,4 @@
-# net_core_custom_middleware
-Create Custom Middleware in .net core
+# Create Custom Middleware in .net core
 
 ## Create a normal class-
 ### Constructor will take the RequestDelegate. This will be used to call the next middleware
@@ -38,7 +37,7 @@ public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
 
 ```
 
-That's it.
+That's it. Middleware will work.
 
-### In the uploaded files we have we have written the code where there is a singleton object, whcih have a dictionary to Track the logged in user without calling Database.
+### In the uploaded files we have we have written the code where there is a singleton object (TrackUser), which have a dictionary to Track the logged in user without calling Database. This will be helpful to verify refresh token and by logged out from any other sppliaction(single sign on), we can revome the user from the dictionary and implement the auto logged out mechanism.
 
